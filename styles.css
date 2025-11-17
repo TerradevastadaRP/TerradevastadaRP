@@ -1,94 +1,111 @@
-/* ----------------- Geral ----------------- */
+/* Geral */
 body {
-    background-color: #000;        /* Fundo preto */
-    color: #fff;                   /* Texto branco */
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* ----------------- Cabeçalho ----------------- */
+/* Cabeçalho */
 header {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
     background-color: #000;
-    border-bottom: 3px solid #00ff00; /* Detalhe verde */
+    border-bottom: 3px solid #00ff00;
 }
 
 header h1 {
-    color: #fff;
     font-size: 48px;
     margin-bottom: 10px;
 }
 
 header p {
-    color: #fff;
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
-/* ----------------- Seções ----------------- */
+header nav a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #00cc00;
+}
+
+/* Slider de imagens */
+#slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Seções */
 section {
     padding: 40px 20px;
     text-align: center;
 }
 
 h2 {
-    color: #00ff00; /* Títulos verdes */
+    color: #00ff00;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 p {
-    color: #fff;
     font-size: 16px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px auto;
 }
 
-/* ----------------- Botões ----------------- */
+/* Botões */
 button {
-    background-color: #00ff00; /* Verde */
-    color: #000;               /* Texto preto */
+    background-color: #00ff00;
+    color: #000;
     border: none;
     padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    margin: 10px;
     transition: 0.3s;
 }
 
 button:hover {
-    background-color: #00cc00; /* Verde mais escuro */
+    background-color: #00cc00;
 }
 
-/* ----------------- Links ----------------- */
-a {
-    color: #00ff00;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #00cc00;
-}
-
-/* ----------------- Rodapé ----------------- */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    border-top: 3px solid #00ff00;
-    color: #fff;
-}
-
-/* ----------------- Extras: caixa de destaque ----------------- */
+/* Cards */
 .card {
-    background-color: #111;       /* Preto mais escuro */
-    border: 2px solid #00ff00;    /* Contorno verde */
+    background-color: #111;
+    border: 2px solid #00ff00;
     padding: 20px;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 400px;
     margin: 20px auto;
     text-align: left;
 }
@@ -101,7 +118,15 @@ footer {
     color: #fff;
 }
 
-/* ----------------- Responsividade ----------------- */
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 3px solid #00ff00;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     header h1 {
         font-size: 36px;
@@ -114,5 +139,9 @@ footer {
     button {
         width: 80%;
         font-size: 18px;
+    }
+
+    .card {
+        width: 90%;
     }
 }
