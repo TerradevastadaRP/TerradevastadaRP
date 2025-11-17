@@ -5,12 +5,13 @@
     --card-color: #121212;        /* Cinza bem escuro para caixas */
     --accent-color: #3cff00;      /* Verde neon militar */
     --text-color: #e6e6e6;        /* Cinza claro para boa leitura */
-    --secondary-text: #8f8f8f;    /* Cinza médio */
-}
-
-}
+    --secondary-text: #8f8f8f;    /* Cinza médio */}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:var(--bg) url('https://i.imgur.com/vsGf8qj.jpeg') center/cover fixed;color:#e8e8e8;line-height:1.5}
+body{
+    background: url("1080p-dayz-background-1920-x-1080-ohkc3pt5qsm4pec8.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;}
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));border-bottom:2px solid rgba(217,75,61,0.12)}
 .brand h1{margin:0;font-size:20px;color:var(--accent);letter-spacing:1px}
 .brand .sub{display:block;font-size:12px;color:var(--muted)}
