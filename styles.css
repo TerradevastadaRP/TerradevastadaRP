@@ -1,144 +1,108 @@
-/* ==============================
-   RESET E BASE
-============================== */
+/* =============================
+    RESET / BASE
+============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #1a1a1a; /* fundo escuro estilo apocalipse */
-    color: #f2f2f2;
+    background-color: #0b0b0b;
+    color: #d4d4d4;
     line-height: 1.6;
 }
 
-a {
-    color: #ff4c4c;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ==============================
-   HEADER
-============================== */
+/* =============================
+    HEADER
+============================= */
 header {
-    background-color: #111;
-    padding: 20px 0;
+    background: #000;
+    padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #ff4c4c;
+    border-bottom: 4px solid #00ff55;
 }
 
 header h1 {
+    color: #00ff55;
+    text-shadow: 0 0 10px #00ff55;
     font-size: 2.5rem;
-    color: #ff4c4c;
-    text-shadow: 2px 2px #000;
-}
-
-/* ==============================
-   NAV
-============================== */
-nav {
-    margin-top: 10px;
 }
 
 nav a {
     margin: 0 15px;
-    padding: 8px 15px;
-    border: 1px solid #ff4c4c;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #ffea00;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #ff4c4c;
-    color: #111;
+    color: #00ff55;
+    text-shadow: 0 0 10px #00ff55;
 }
 
-/* ==============================
-   MAIN / SEÇÕES
-============================== */
+/* =============================
+    SEÇÕES
+============================= */
 main {
+    max-width: 1100px;
+    margin: auto;
     padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 section {
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #222;
-    border: 2px solid #333;
+    background: #111;
+    padding: 25px;
     border-radius: 10px;
+    border-left: 4px solid #00ff55;
+    box-shadow: 0 0 10px #000;
+    margin-bottom: 40px;
 }
 
 section h2 {
-    color: #ff4c4c;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px #000;
+    color: #00ff55;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #00ff55;
 }
 
 section p {
-    margin-bottom: 10px;
+    color: #bfbfbf;
 }
 
-/* ==============================
-   BOTÕES
-============================== */
-button, .btn {
-    background-color: #ff4c4c;
-    color: #111;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #ff0000;
-    transform: scale(1.05);
-}
-
-/* ==============================
-   FOOTER
-============================== */
-footer {
-    background-color: #111;
-    color: #888;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid #ff4c4c;
-    margin-top: 50px;
-}
-
-/* ==============================
-   IMAGENS
-============================== */
+/* =============================
+    IMAGENS
+============================= */
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #000;
+    border: 2px solid #ffea00;
+    box-shadow: 0 0 15px #000;
 }
 
-/* ==============================
-   RESPONSIVIDADE
-============================== */
+/* =============================
+    FOOTER
+============================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    border-top: 4px solid #00ff55;
+    margin-top: 50px;
+    color: #888;
+}
+
+/* =============================
+    RESPONSIVO
+============================= */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     nav a {
+        display: inline-block;
         margin: 5px 10px;
-        padding: 8px 12px;
-    }
-    main {
-        padding: 20px 10px;
     }
 }
