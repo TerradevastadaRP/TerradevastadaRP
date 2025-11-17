@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Whitelist — Terra Devastada RP</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Terra Devastada RP</h1><span class="sub">Whitelist</span></div>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="rules.html">Regras</a>
+      <a href="staff.html">Staff</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="whitelist.html" class="cta">Whitelist</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main class="section">
+    <h2>📝 Formulário de Whitelist</h2>
+    <p>Preencha o formulário abaixo e envie. <strong>IMPORTANTE:</strong> este site é estático — escolha uma das opções:</p>
+    <ul>
+      <li><strong>A)</strong> Usar Google Forms (recomendado) — cole o link do formulário no Discord.</li>
+      <li><strong>B)</strong> Usar criação automática de Issue no GitHub (manual) — substitua no código o link do botão abaixo pelo seu repositório.</li>
+    </ul>
+
+    <form class="wl-form" onsubmit="openGitHubIssue(event)">
+      <label>Nick no jogo<br/><input id="nick" required/></label>
+      <label>Idade<br/><input id="age" type="number" min="13" required/></label>
+      <label>Tempo de jogo / experiência<br/><input id="exp" required/></label>
+      <label>Por que quer entrar no servidor?<br/><textarea id="why" rows="4" required></textarea></label>
+      <div class="form-actions">
+        <button type="submit" class="btn">Enviar (abrir issue)</button>
+        <a class="btn ghost" href="#" onclick="copyTemplate()">Copiar modelo</a>
+      </div>
+      <p class="note">Ao enviar, será aberta a página de criação de issue no GitHub — você precisa estar logado e substituir o link com seu repositório.</p>
+    </form>
+
+    <h4>Link do botão de Issue (exemplo)</h4>
+    <pre id="issue-link">https://github.com/SEU_USUARIO/SEU_REPOSITORIO/issues/new?title=Whitelist%20-%20NICK&body=Nick:%20NICK%0AIdade:%20IDADE%0AExperiencia:%20EXPERIENCIA%0AMotivo:%20MOTIVO</pre>
+    <p class="note">Substitua <code>SEU_USUARIO/SEU_REPOSITORIO</code> pelo seu usuário e repo (ex.: filypesouza/filypesouza.github.io).</p>
+  </main>
+
+  <footer class="site-footer">
+    <a href="index.html">Voltar</a>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
