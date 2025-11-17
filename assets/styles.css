@@ -8,7 +8,7 @@
     --secondary-text: #8f8f8f;    /* Cinza médio */}
 *{box-sizing:border-box}
 body{
-    background: url("1080p-dayz-background-1920-x-1080-ohkc3pt5qsm4pec8.jpg") no-repeat center center fixed;
+    background: url("img/fundo.jpg") no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;}
