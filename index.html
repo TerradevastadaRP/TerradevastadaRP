@@ -8,27 +8,35 @@
 </head>
 <body>
 
-    <!-- ----------------- Cabeçalho ----------------- -->
+    <!-- Cabeçalho -->
     <header>
         <h1>Terra Devastada RP</h1>
         <p>Servidor DayZ Roleplay inspirado em The Walking Dead</p>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#regras">Regras</a>
+            <a href="#loja">Loja</a>
+        </nav>
     </header>
 
-    <!-- ----------------- Menu de Navegação ----------------- -->
-    <nav style="text-align:center; margin:20px 0;">
-        <a href="#sobre">Sobre</a> |
-        <a href="#regras">Regras</a> |
-        <a href="#entrar">Entrar</a>
-    </nav>
+    <!-- Seção imagens rotativas -->
+    <section id="slider">
+        <div class="slide active"><img src="img/fundo1.jpg" alt="Imagem 1"></div>
+        <div class="slide"><img src="img/fundo2.jpg" alt="Imagem 2"></div>
+        <div class="slide"><img src="img/fundo3.jpg" alt="Imagem 3"></div>
+    </section>
 
-    <!-- ----------------- Seção Sobre ----------------- -->
+    <!-- Seção Sobre -->
     <section id="sobre">
         <h2>Sobre o servidor</h2>
         <p>Entre e sobreviva em um mundo pós-apocalíptico cheio de zumbis e roleplay! Explore, faça alianças e enfrente desafios em um ambiente realista inspirado em The Walking Dead.</p>
-        <button id="entrar">Entrar no servidor</button>
+        <button onclick="window.location.href='#loja'">Visitar Loja</button>
+        <button onclick="window.location.href='#regras'">Ver Regras</button>
     </section>
 
-    <!-- ----------------- Seção Regras ----------------- -->
+    <!-- Seção Regras -->
     <section id="regras">
         <h2>Regras do servidor</h2>
         <div class="card">
@@ -37,18 +45,49 @@
         </div>
         <div class="card">
             <h3>Roleplay</h3>
-            <p>Todos devem seguir a temática do servidor e manter a imersão no mundo apocalíptico.</p>
+            <p>Chernarus está às moscas… e você, qual será a sua jornada nesse mundo vazio?</p>
         </div>
         <div class="card">
-            <h3>PVP</h3>
-            <p>O PvP é permitido, mas deve seguir as regras de roleplay e respeito ao servidor.</p>
+            <h3>Full Roleplay</h3>
+            <p>Servidor full roleplay: viva cada escolha, sinta cada consequência e seja fiel à história do seu personagem.</p>
         </div>
     </section>
 
-    <!-- ----------------- Rodapé ----------------- -->
+    <!-- Seção Loja -->
+    <section id="loja">
+        <h2>Loja do servidor</h2>
+        <div class="card">
+            <h3>Veículos</h3>
+            <p>Equipamentos e ferramentas</p>
+            <button>Comprar</button>
+        </div>
+        <div class="card">
+            <h3>base personalizada</h3>
+            <p>Prioridade de fila</p>
+            <button>Comprar</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Terra Devastada RP - Todos os direitos reservados</p>
     </footer>
+
+    <!-- Script para slider -->
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let current = 0;
+
+        function showSlide(index){
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 4000);
+    </script>
 
 </body>
 </html>
