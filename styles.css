@@ -1,75 +1,118 @@
-/* Theme: Apocalipse Zumbi — Verde neon + Preto + Amarelo
-.container{max-width:1100px;margin:0 auto;padding:0 18px}
-
-
-/* grain overlay */
-.grain{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:3px 3px;mix-blend-mode:overlay;opacity:0.35}
-
-
-/* header */
-.site-header{background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:3px solid rgba(0,255,85,0.06)}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
-.logo{color:var(--neon);font-weight:800;letter-spacing:1px;text-shadow:0 0 8px rgba(0,255,85,0.12);font-size:1.25rem}
-.nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px;border-radius:8px}
-.site-nav a{color:var(--warn);margin-left:18px;text-decoration:none;font-weight:700}
-.site-nav a:hover{color:var(--neon);text-shadow:0 0 8px var(--neon)}
-
-
-/* hero */
-.hero{padding:60px 0}
-.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-.eyebrow{color:var(--warn);font-weight:700;letter-spacing:1px;margin-bottom:8px}
-.big{color:var(--neon);font-size:2.2rem;line-height:1.05;margin-bottom:12px}
-.lead{color:#cfcfcf;margin-bottom:18px}
-.btn{display:inline-block;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
-.btn-primary{background:linear-gradient(90deg,var(--neon),#66ff88);color:#001;border:none}
-.btn-outline{border:2px solid var(--warn);color:var(--warn);background:transparent}
-
-
-.hero-media .card{background:linear-gradient(180deg,#0a0a0a,#111);padding:8px;border-radius:12px;border:2px solid rgba(0,255,85,0.06)}
-.hero-media img{display:block;width:100%;height:auto;border-radius:8px;filter:contrast(0.9) saturate(1.2)}
-.toxic-glow{box-shadow:0 8px 30px rgba(0,255,85,0.06)}
-
-
-/* features */
-.features{padding:30px 0}
-.features h3{color:var(--neon);margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.feature{background:linear-gradient(180deg,#0b0b0b,#111);padding:18px;border-radius:10px;border-left:4px solid var(--neon)}
-.feature h4{color:var(--warn);margin-bottom:8px}
-
-
-/* gallery */
-.gallery-grid{grid-template-columns:repeat(3,1fr)}
-.gallery-grid img{width:100%;height:140px;object-fit:cover;border-radius:8px;border:2px solid rgba(255,234,0,0.08)}
-
-
-/* staff */
-.card-staff{background:var(--panel);padding:14px;border-radius:10px;text-align:center}
-.card-staff strong{display:block;color:var(--neon);margin-bottom:6px}
-
-
-/* footer */
-.site-footer{padding:24px 0;border-top:3px solid rgba(0,255,85,0.06);margin-top:60px;text-align:center;color:#9a9a9a}
-.site-footer a{color:var(--warn);margin-left:12px}
-
-
-/* glitch effect */
-@keyframes glitch{0%{transform:translate(0)}20%{transform:translate(-1px,1px)}40%{transform:translate(1px,-1px)}60%{transform:translate(-1px,-1px)}80%{transform:translate(1px,1px)}100%{transform:translate(0)}}
-#glitch:hover{animation:glitch 400ms steps(2) 2}
-
-
-/* responsive */
-@media(max-width:980px){
-.hero-inner{grid-template-columns:1fr 320px}
-.grid{grid-template-columns:repeat(2,1fr)}
-.gallery-grid{grid-template-columns:repeat(2,1fr)}
+/* ----------------- Geral ----------------- */
+body {
+    background-color: #000;        /* Fundo preto */
+    color: #fff;                   /* Texto branco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-@media(max-width:680px){
-.nav-toggle{display:block}
-.site-nav{display:none}
-.site-nav.active{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-.hero-inner{grid-template-columns:1fr}
-.grid{grid-template-columns:1fr}
-.gallery-grid{grid-template-columns:1fr}
+
+/* ----------------- Cabeçalho ----------------- */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    border-bottom: 3px solid #00ff00; /* Detalhe verde */
+}
+
+header h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ----------------- Seções ----------------- */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #00ff00; /* Títulos verdes */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* ----------------- Botões ----------------- */
+button {
+    background-color: #00ff00; /* Verde */
+    color: #000;               /* Texto preto */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00; /* Verde mais escuro */
+}
+
+/* ----------------- Links ----------------- */
+a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #00cc00;
+}
+
+/* ----------------- Rodapé ----------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 3px solid #00ff00;
+    color: #fff;
+}
+
+/* ----------------- Extras: caixa de destaque ----------------- */
+.card {
+    background-color: #111;       /* Preto mais escuro */
+    border: 2px solid #00ff00;    /* Contorno verde */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.card h3 {
+    color: #00ff00;
+}
+
+.card p {
+    color: #fff;
+}
+
+/* ----------------- Responsividade ----------------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    button {
+        width: 80%;
+        font-size: 18px;
+    }
 }
