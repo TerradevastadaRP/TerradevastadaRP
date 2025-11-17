@@ -1,10 +1,13 @@
 
 :root{
-  --bg:#070607;
-  --card:#0e0e0e;
-  --accent:#d94b3d;
-  --muted:#9aa2a6;
-  --glass: rgba(255,255,255,0.03);
+:root {
+    --bg-color: #070707;          /* Preto profundo do fundo */
+    --card-color: #121212;        /* Cinza bem escuro para caixas */
+    --accent-color: #3cff00;      /* Verde neon militar */
+    --text-color: #e6e6e6;        /* Cinza claro para boa leitura */
+    --secondary-text: #8f8f8f;    /* Cinza médio */
+}
+
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:var(--bg) url('https://i.imgur.com/vsGf8qj.jpeg') center/cover fixed;color:#e8e8e8;line-height:1.5}
